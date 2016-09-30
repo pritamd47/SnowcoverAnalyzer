@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8702b9-08ce-4397-bd0f-d4bf11ead9e7" name="Default" comment="Added threading&#10;Works, but when it works very fast, ftp crashes for some reason. Does the job though">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/MOD10A1.A2013177.h25v06.006.2016143122733.hdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/MOD10A2.006" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/MOD10A2.A2013177.h25v06.006.2016145074306.hdf.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/NDSI_Snow_Cover (dimension).txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SnowcoverAnalyzer.iml" afterPath="$PROJECT_DIR$/.idea/SnowcoverAnalyzer.iml" />
+    <list default="true" id="9f8702b9-08ce-4397-bd0f-d4bf11ead9e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Downloader.py" afterPath="$PROJECT_DIR$/Downloader.py" />
     </list>
@@ -32,37 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Downloader.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Downloader.py">
+      <file leaf-file-name="Analyzer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="211" column="10" selection-start-line="211" selection-start-column="10" selection-end-line="211" selection-end-column="10" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#1915#3482#0" expanded="false" />
-                <element signature="e#2566#2612#0" expanded="false" />
-                <element signature="e#3483#3484#0" expanded="false" />
-                <element signature="e#5175#5263#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ftplib.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda2/Lib/ftplib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15776">
-              <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -394,6 +363,14 @@
       <option name="presentableId" value="Default" />
       <updated>1474980338705</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added threading&#10;Works, but when it works very fast, ftp crashes for some reason. Does the job though">
+      <created>1475233182376</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1475233182376</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -411,11 +388,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.294686" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294686" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -458,6 +435,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added threading&#10;Works, but when it works very fast, ftp crashes for some reason. Does the job though" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added threading&#10;Works, but when it works very fast, ftp crashes for some reason. Does the job though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -537,17 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Downloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="211" column="10" selection-start-line="211" selection-start-column="10" selection-end-line="211" selection-end-column="10" />
+        <state relative-caret-position="243">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
             <element signature="e#1915#3482#0" expanded="false" />
@@ -560,7 +534,7 @@
     </entry>
     <entry file="file://C:/Anaconda2/Lib/ftplib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
+        <state relative-caret-position="17">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
@@ -568,8 +542,16 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15776">
+        <state relative-caret-position="17">
           <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

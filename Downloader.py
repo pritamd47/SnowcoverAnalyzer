@@ -195,17 +195,8 @@ def main():
     directories.remove('..')
     directories.sort()
 
-
     threadhandler(directories, 10, "h25v06", "MOST/MOD10A2.006/", "Data\\", thread_cap= 10)
 
-
-    # t1 = downloaderThread(1, directories[0:10], "h25v06", "MOST/MOD10A2.006/", "Data\\")
-    # t2 = downloaderThread(2, directories[10:20], "h25v06", "MOST/MOD10A2.006/", "Data\\")
-    #
-    # t1.connecttoftp(addr)
-    # t2.connecttoftp(addr)
-    # t1.start()
-    # t2.start()
 
 
 if __name__ == '__main__':
