@@ -1,35 +1,76 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from pyhdf.SD import SD, SDC, SD
+import threading
+from pyhdf.SD import SD, SDC
+import os
+import time
 
 
-hdffile = SD(r"data\MOD10A1.A2013177.h25v06.006.2016143122733.hdf", SDC.READ)
 
-print hdffile.datasets()
+path = "Data" + os.sep
 
-DATAFIELD_NAME = "NDSI_Snow_Cover"
+directories = os.listdir(path)
+directories = filter(lambda x: os.path.isdir(path+x), directories)
 
-data_mesh = hdffile.select(DATAFIELD_NAME)
-data = data_mesh[:,:].astype(np.int64)
+os.chdir(path)        # Changed directory to Path
+cwd = os.getcwd()
+snowcov = []
+date = []
 
-istart = 0
-ifinish = 10
+cover = []
 
-jstart = 0
-jfinish = 5
-#
-#for j in range(0, 2400, 10):
-#    jstart = j
-#    jfinish = jstart + 10
-#    print "sec" + str(j/10) + ": "
-    #print data[istart:ifinish, jstart:jfinish]
-plt.imshow(data[:,:], interpolation='nearest')
+
+class analyzerthread(threading.Thread):
+    def __init__(self, dataset):
+        threading.Thread.__init__(self)
+
+        self.dataset = dataset
+
+    def run(self):
+        #self.calcsnow()
+        pass
+
+def calcsnow(dataset):
+    snow = 0.0
+    global cover
+
+    #print dataset[:10, :10]
+    for i in range(dataset.shape[0]):
+        for j in range(dataset.shape[1]):
+            if dataset[i, j] in (200, 100):
+                snow += 1
+
+    snowcover = (snow/ dataset.shape[0]**2) * 100
+    cover.append(snowcover * 1.0/256.0)
+
+
+
+start = time.time()
+
+
+for i in range(1, 6):
+    dirstart = time.time()
+    cover = []    # Global
+    date.append(directories[i])
+
+    hdffile = SD(directories[i] + os.sep + "h25v06.hdf")
+    DATASET_NAME = "Maximum_Snow_Extent"
+    data_mesh = hdffile.select(DATASET_NAME)
+
+    print "[+] Working on {0}".format(directories[i])
+
+    data = data_mesh[:,:].astype(np.int64)    # This is stored in array form
+    snow = 0
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            if data[i, j] in (100, 200):
+                snow += 1
+
+    snowcov.append((snow / 5670000.0) * 100)
+    print "[+] Finished working in directory with result {0}".format(snowcov[-1])
+    print "[!] Time taken: {0}".format(time.time()-dirstart)
+
+print time.time() - start
+plot = plt.plot(snowcov)
+
 plt.show()
-
-
-# Code doesn't reach here
-#with open("Data/NDSI_Snow_Cover (dimension).txt", 'r') as txtfile:
-#    data = numpy.loadtxt(txtfile, dtype=int)
-#    imgplot = plt.imshow(data)
-#    plt.show()
