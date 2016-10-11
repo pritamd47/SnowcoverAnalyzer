@@ -111,7 +111,7 @@ def main():
 
     addr = '128.138.97.102'  # This is the address of ftp://n5eil01u.ecs.nsidc.org/SAN/MOST/MOD10A2.006. Retrieved from Filezilla
     password = user = 'anonymous'
-    filename = "h25v06"
+    filename = "h26v06"
     ftp = ftplib.FTP(addr)
     ftp.login(user, password)
 
@@ -135,7 +135,7 @@ def main():
     directories.remove('..')
     directories.sort()
 
-    threadhandler(directories, 5, filename, "MOST/MOD10A2.006/", "Data\\", thread_cap= 15)
+    threadhandler(directories[:52], 10, filename, "MOST/MOD10A2.006/", "Data\\", thread_cap= 5)
 
 if __name__ == '__main__':
     main()
