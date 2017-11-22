@@ -3,6 +3,7 @@ from osgeo import gdal
 import os
 from matplotlib import pyplot as plt
 import time
+improt csv
 
 
 def findsnowliveelev(snowdata, demdata, step=10):
@@ -29,6 +30,8 @@ def main():
     directories = filter(lambda x: os.path.isdir(src + x), directories)
 
     cloud_cover = 0
+    
+    result = []
 
     for directory in directories[3:]:
         start = time.time()
@@ -54,9 +57,16 @@ def main():
         if percentage_clouds > 0.1:
             continue
 
-        findsnowliveelev(snow, DEM)
+        rsle, _, _ = findsnowliveelev(snow, DEM)
+        
+        result.append(tuple([directory, rsle]))
         print "[+] Finished working: {0}s".format(time.time() - start)
-
+    
+    # Writes result into csv
+    with open("Result.csv", 'wb') as res:
+        wr = csv.writer(res, quoting = csv.QUOTE_ALL)
+        wr.writerow(result)
+        
     print "[=] Mean cloud cover: " + str((cloud_cover/(len(directories)-3)))
 
 
